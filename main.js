@@ -1,7 +1,7 @@
-console.log('hello world') 
-console.log('hi')
-console.log('hi')
-console.log('hi')
-console.log('hi')
-console.log('hi')
-console.log('hi')
+const body = document.querySelector('body');
+
+body.style.backgroundColor = 'green';
+
+// document.addEventListener('DOMContentLoaded', () => {
+    
+// })
