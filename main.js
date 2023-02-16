@@ -4,18 +4,40 @@ const body = document.querySelector('body');
 const arrOfDivs = document.querySelectorAll('div');
 console.log(arrOfDivs)
 
+// New York City -> huge rat
+  // IF they choose NYC, assign image to rat
+  // call fetch on NYC weather api 
 
-const cat = document.createElement('img')
-cat.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbFlrpkDUdtr7pYqjW4RrzKPMC75_xQ4Q7AA&usqp=CAU';
-body.appendChild(cat)
 
-let counter = 0;
+// Sydney, Australia -> Kangaroo
+  // IF they choose Sydney, assign image to kangaroo
+  // call fetch on Sydney weather 
+
+// Parse weather and pull the icon key
+  // if snow || fog || cloudy || partly-cloudy-night -> cloud icon
+  // if rain -> rain icon
+  // if wind || clear-day -> sun
+  // if clear-night -> moon
+
+const pet = document.createElement('img')
+pet.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbFlrpkDUdtr7pYqjW4RrzKPMC75_xQ4Q7AA&usqp=CAU';
+body.appendChild(pet)
+
+let counter = 5;
 body.addEventListener('keydown', (el) => {
-  if (el.code === 'ArrowDown') {
-    arrOfDivs[counter].appendChild(cat);
+  
+  if (counter < 0) {
+    alert("Your pet ran away!")
+    arrOfDivs[0].removeChild(pet);
+  }
+  else if (el.code === 'ArrowDown') {
+    arrOfDivs[counter].appendChild(pet);
     counter++;
   }
-    
+  else if (el.code === 'ArrowUp') {
+    arrOfDivs[counter].appendChild(pet);
+    counter--;
+  }
 })
 
 
