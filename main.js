@@ -93,8 +93,8 @@ let counter = 5;
 body.addEventListener('keydown', (el) => {
   
   if (counter < 0) {
-    alert("Your pet ran away!")
-    arrOfDivs[0].removeChild(pet);
+    alert ("Your pet ran away!");
+    location.reload();
   }
   else if (el.code === 'ArrowDown') {
     arrOfDivs[counter].appendChild(pet);
